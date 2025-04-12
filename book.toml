@@ -1,0 +1,6 @@
+[book]
+authors = ["greg@aptoslabs.com"]
+language = "en"
+multilingual = true
+src = "src"
+title = "The Aptos Book"
