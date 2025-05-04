@@ -12,6 +12,6 @@ To learn more see one of the following sections:
 
 TODO: Update
 - [Syntax](syntax/intro.md)
-- [Standards](standards/intro.md)
+- [Standards](../standards/intro.md)
 - [Tools](tools/intro.md)
 

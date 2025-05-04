@@ -1,1 +1,0 @@
-# Aptos Rust SDK

@@ -1,3 +1,0 @@
-# The Object Model
-
-TODO
