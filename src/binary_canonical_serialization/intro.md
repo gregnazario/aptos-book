@@ -12,7 +12,7 @@ represented by the length of the string as a binary encoded uleb-128, followed b
 e.g. `"hello" = 0x0548656C6C6F`  This is different than say a human-readable format such as JSON which would give
 `"hello"`
 
-## Canonical
+### Canonical
 
 There is only one canonical way to represent the bytes. This ensures signing and the representation is consistent.
 
@@ -35,7 +35,7 @@ they are not-canonical. In BCS, it would be a pre-defined order, so only one wou
 However, in BCS, there is only one valid representation of that, which would be the bytes `0x0102`.  `0x0201` is not
 canonical, and it would instead be interpreted as `{"a":2, "b":1}`.
 
-## Non-self describing
+### Non-self describing
 
 The format is non-self describing. This means that deserialization requires knowledge of the shape and how to interpret
 the bytes. This is in opposition to a type like JSON, which is self describing.
