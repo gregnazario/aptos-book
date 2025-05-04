@@ -1,6 +1,9 @@
 [book]
-authors = ["greg@aptoslabs.com"]
+authors = ["greg@gnazar.io"]
 language = "en"
 multilingual = true
 src = "src"
 title = "The Aptos Book"
+
+[preprocessor.gettext]
+after = ["links"]
