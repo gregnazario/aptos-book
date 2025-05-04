@@ -7,7 +7,6 @@ entirely offline, for other locations.
 
 ## Get Started
 
-- [BCS](binary_canonical_serialization/intro.md)
 - TODO: Write more before linking
 
 ## Contribution
@@ -59,11 +58,3 @@ Please feel free to open a GitHub issue to add more information into each of the
     - [ ]  [Move Prover](move/move_prover.md)
     - [ ]  [Move Playground](move/move_playground.md)
     - [ ]  [Move Unit Tests](move/move_unit_tests.md)
-- [ ]  [SDKs](sdk.md)
-  - [ ]  [TypeScript SDK](sdk/web3js.md)
-  - [ ]  [Python SDK](sdk/python_sdk.md)
-  - [ ]  [Rust SDK](sdk/rust_sdk.md)
-  - [ ]  [Dotnet SDK](sdk/dotnet_sdk.md)
-  - [ ]  [C++ SDK](sdk/cpp_sdk.md)
-  - [ ]  [Java SDK](sdk/java_sdk.md)
-- [ ]  [Learning Resources](resources.md)

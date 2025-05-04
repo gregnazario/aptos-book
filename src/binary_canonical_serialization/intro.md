@@ -1,1 +1,0 @@
-# Binary Canonical Serialization (BCS)
