@@ -5,11 +5,26 @@ provide a single resource for design patterns, usage, and other resources for bu
 providing context for how to build on Aptos, and anything needed for that. The additional benefit is that it can be run
 entirely offline, for other locations.
 
-## Get Started
+# Get Started
 
-- TODO: Write more before linking
+How to use this book, there are different sections to skip ahead for different topics. However, it is mostly built in an
+opinionated way where the reader first learns about the building blocks of Aptos, and builds up to writing Move
+contracts on top.
 
-## Contribution
+It's suggested to learn in this order:
+
+- [Binary Canonical Serialization (BCS)](bcs/intro.md) - How data is serialized in Move on Aptos
+- [Storage](storage/intro.md) - How data is stored on Aptos
+- [Data models](data_models/intro.md) - How data is modeled on Aptos
+- [Gas](gas/intro.md) - How execution and storage are charged on Aptos
+- [Move](move/intro.md) - How smart contracts are built, syntax and others
+- [Standard Libraries](standard_libraries/intro.md) - Standard libraries for building smart contracts
+- [Tools](tools/intro.md) - How to use tools to build on Aptos
+- [Learning Resources](resources.md) - More resources to learn more about Aptos and Move
+
+If you learn better from examples, [Aptos By Example](aptos_by_example/intro.md) will be a better bet for you.
+
+# Contribution
 
 Please feel free to open a GitHub issue to add more information into each of these sections. All pull requests must:
 
@@ -20,40 +35,36 @@ Please feel free to open a GitHub issue to add more information into each of the
 ## Written and Planned Sections
 
 - [ ] [Move on Aptos](move/intro.md)
-  - [ ] [Move Syntax](move/syntax/intro.md)
-    - [ ]  [Primitives](move/syntax/primitives.md)
-    - [ ]  [Structs](move/syntax/structs.md)
-    - [ ]  [Enums](move/syntax/enums.md)
-    - [ ]  [Functions](move/syntax/functions.md)
-    - [ ]  [Modules](move/syntax/modules.md)
-    - [ ]  [Traits](move/syntax/traits.md)
-    - [ ]  [Errors](move/syntax/errors.md)
-    - [ ]  [Assertions](move/syntax/assertions.md)
-    - [ ]  [Macros](move/syntax/macros.md)
-    - [ ]  [Attributes](move/syntax/attributes.md)
-    - [ ]  [Imports](move/syntax/imports.md)
-    - [ ]  [Constants](move/syntax/constants.md)
-    - [ ]  [References](move/syntax/references.md)
-    - [ ]  [Patterns](move/syntax/patterns.md)
-    - [ ]  [Control Flow](move/syntax/control_flow.md)
-    - [ ]  [Namespaces](move/syntax/namespaces.md)
-    - [ ]  [Visibility](move/syntax/visibility.md)
-    - [ ]  [Type Parameters](move/syntax/type_parameters.md)
-    - [ ]  [Type Inference](move/syntax/type_inference.md)
-    - [ ]  [Type Checking](move/syntax/type_checking.md)
-    - [ ]  [Type Casting](move/syntax/type_casting.md)
-    - [ ]  [Type Conversions](move/syntax/type_conversions.md)
-    - [ ]  [Type Constraints](move/syntax/type_constraints.md)
-  - [ ]  [Storage](move/storage.md)
-  - [ ]  [Data Models](move/data_models.md)
-    - [ ]  [Account Model](standards/data_models/account_model.md)
-    - [ ]  [Object Model](standards/data_models/object_model.md)
-  - [ ]  [Standard Libraries](move/standard_libs.md)
-    - [ ]  [Move Stdlib](move/move_stdlib.md)
-    - [ ]  [Aptos Stdlib](move/aptos_stdlib.md)
-    - [ ]  [Aptos Framework](move/aptos_framework.md)
-  - [ ]  [Programming Patterns](move/patterns.md)
-  - [ ]  [User Guide](move/user_guide.md)
+    - [ ] [Move Syntax](move/syntax/intro.md)
+        - [ ]  [Primitives](move/syntax/primitives.md)
+        - [ ]  [Structs](move/syntax/structs.md)
+        - [ ]  [Enums](move/syntax/enums.md)
+        - [ ]  [Functions](move/syntax/functions.md)
+        - [ ]  [Modules](move/syntax/modules.md)
+        - [ ]  [Traits](move/syntax/traits.md)
+        - [ ]  [Errors](move/syntax/errors.md)
+        - [ ]  [Assertions](move/syntax/assertions.md)
+        - [ ]  [Macros](move/syntax/macros.md)
+        - [ ]  [Attributes](move/syntax/attributes.md)
+        - [ ]  [Imports](move/syntax/imports.md)
+        - [ ]  [Constants](move/syntax/constants.md)
+        - [ ]  [References](move/syntax/references.md)
+        - [ ]  [Patterns](move/syntax/patterns.md)
+        - [ ]  [Control Flow](move/syntax/control_flow.md)
+        - [ ]  [Namespaces](move/syntax/namespaces.md)
+        - [ ]  [Visibility](move/syntax/visibility.md)
+        - [ ]  [Type Parameters](move/syntax/type_parameters.md)
+        - [ ]  [Type Inference](move/syntax/type_inference.md)
+        - [ ]  [Type Checking](move/syntax/type_checking.md)
+        - [ ]  [Type Casting](move/syntax/type_casting.md)
+        - [ ]  [Type Conversions](move/syntax/type_conversions.md)
+        - [ ]  [Type Constraints](move/syntax/type_constraints.md)
+    - [ ]  [Standard Libraries](move/standard_libs.md)
+    - [ ]  [Move Stdlib](standard_libraries/move_stdlib.md)
+    - [ ]  [Aptos Stdlib](standard_libraries/aptos_stdlib.md)
+    - [ ]  [Aptos Framework](standard_libraries/aptos_framework.md)
+    - [ ]  [Programming Patterns](move/patterns.md)
+    - [ ]  [User Guide](move/user_guide.md)
     - [ ]  [Concurrency](move/syntax/concurrency.md)
     - [ ]  [Move Prover](move/move_prover.md)
     - [ ]  [Move Playground](move/move_playground.md)
