@@ -10,8 +10,4 @@ The key features of Move are:
 
 To learn more see one of the following sections:
 
-TODO: Update
-- [Syntax](syntax/intro.md)
-- [Standards](../standards/intro.md)
-- [Tools](tools/intro.md)
-
+TODO

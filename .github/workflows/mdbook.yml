@@ -29,7 +29,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      MDBOOK_VERSION: 0.4.36
+      MDBOOK_VERSION: 0.4.49
+      LLMS_TXT_VERSION: 0.1.1
     steps:
       - uses: actions/checkout@v4
       - name: Install mdBook
@@ -37,6 +38,8 @@ jobs:
           curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf -y | sh
           rustup update
           cargo install --version ${MDBOOK_VERSION} mdbook
+      - name: Install mdBook llms.txt
+        run: cargo install --version ${LLMS_TXT_VERSION} mdbook-llms-txt-tools
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5

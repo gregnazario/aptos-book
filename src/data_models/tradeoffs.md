@@ -32,9 +32,9 @@ ownership models, as well as some tricks for providing composability, and soul-b
 
 - Parallelism across objects are easy, just create separate objects for parallel tasks.
 - Built in ownership.
-- Resources are collected easily in a [resource group](../todo.md).
+- Resources are collected easily in a resource group.
 - With the resource group, all resources in the group get written to the write set.
-- Multiple resources in the resource group only cause a [single storage read](../todo.md) (less gas).
+- Multiple resources in the resource group only cause a single storage read (less gas).
 - Addresses can be randomly generated or derived from the initial owner for instant access.
 - Programmatic signer access.
 - Composability is easy, NFTs own other NFTs etc.
