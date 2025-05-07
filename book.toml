@@ -4,6 +4,7 @@ language = "en"
 multilingual = true
 src = "src"
 title = "The Aptos Book"
+description = "A brief guide about Aptos."
 
 [preprocessor.gettext]
 after = ["links"]
@@ -19,6 +20,16 @@ command = "mdbook-mermaid"
 
 [output.html]
 additional-js = ["mermaid.min.js", "mermaid-init.js"]
+git-repository-url = "https://github.com/gregnazario/aptos-book"
+edit-url-template = "https://github.com/<owner>/<repo>/edit/<branch>/{path}"
+site-url = "https://aptos-book.com"
+cname = "aptos-book.com"
+
+[output.html.fold]
+enable = true
+level = 0
+
+[output.html.redirect]
 
 [output.linkcheck]
 follow-web-links = true
