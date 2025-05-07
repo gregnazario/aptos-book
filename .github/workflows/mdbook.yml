@@ -52,7 +52,7 @@ jobs:
       - name: Install mdBook llms-txt
         uses: taiki-e/install-action@v2
         with:
-          tool: mdbook-llms-txt@0.1.1
+          tool: mdbook-llms-txt-tools@0.1.1
       - name: Build with mdBook
         run: mdbook build
       - name: Fix the llms.txt location
