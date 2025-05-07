@@ -45,8 +45,8 @@ jobs:
         run: mdbook build
       - name: Fix the llms.txt location
         run: |
-          mv book/llms-txt.txt book/html/llms.txt
-          mv book/llms-txt-full.txt book/html/llms.txt
+          mv book/llms-txt/llms-txt.txt book/html/llms.txt
+          mv book/llms-txt-full/llms-txt-full.txt book/html/llms-full.txt
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
