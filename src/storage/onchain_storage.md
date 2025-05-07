@@ -8,7 +8,11 @@ There are a few types:
 - Resources
 - Resource Groups
 - Tables
-- TODO: Vectors, BigVectors, SimpleMap, OrderedMap, BigOrderedMap, etc.
+- Vectors
+- BigVectors
+- SimpleMap
+- OrderedMap
+- BigOrderedMap
 
 ## Resources
 
@@ -21,7 +25,7 @@ Keep in mind that the storage deposit associated with a resource is a single slo
 
 ## Resource Groups
 
-As specified in [AIP-XX](todo.md), resource groups are a collection of resources in a single storage slot. These are
+As specified in AIP-9, resource groups are a collection of resources in a single storage slot. These are
 stored as a b-tree, in the storage slot, which allows for more efficient packing of data (fewer slots). This is a slight
 tradeoff where, if accessing multiple resources together often, will be much more efficient, but all writes send all
 resources in the group to the output writeset. There is also slight cost to navigate the b-tree.
@@ -64,3 +68,7 @@ into vectors. It is additionally iterable over the course of the whole table.
 TODO: Diagram
 
 Note: there is a possible DDoS vector if people can create keys that end up in a single storage item.
+
+### Vector
+
+Vectors are sequences of

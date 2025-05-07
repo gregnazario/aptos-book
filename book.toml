@@ -7,3 +7,23 @@ title = "The Aptos Book"
 
 [preprocessor.gettext]
 after = ["links"]
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
+
+# Basic llmstxt.org format output
+[output.llms-txt]
+
+# Detailed llmstxt.org format output with additional information
+[output.llms-txt-full]
+
+[output.html]
+additional-js = ["mermaid.min.js", "mermaid-init.js"]
+
+[output.linkcheck]
+follow-web-links = true
+traverse-parent-directories = false
+exclude = []
+user-agent = "mdbook-linkcheck/0.4.0"
+
+warning-policy = "error"
