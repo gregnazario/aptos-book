@@ -31,5 +31,3 @@ Please feel free to open a GitHub issue to add more information into each of the
 1. Define the section that it is updating
 2. Provide a concise description of the change
 3. Callout any missing areas
-
-## Written and Planned Sections

@@ -32,7 +32,7 @@ level = 0
 [output.html.redirect]
 
 [output.linkcheck]
-follow-web-links = true
+follow-web-links = true # true only when connected to the internet
 traverse-parent-directories = false
 exclude = []
 user-agent = "mdbook-linkcheck/0.4.0"

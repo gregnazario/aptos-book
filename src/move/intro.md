@@ -10,4 +10,5 @@ The key features of Move are:
 
 To learn more see one of the following sections:
 
-TODO
+* [Syntax](syntax/intro.md)
+* [Design Patterns](design_patterns/intro.md)
