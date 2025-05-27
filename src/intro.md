@@ -19,7 +19,6 @@ It's suggested to learn in this order:
 - [Gas](gas/intro.md) - How execution and storage are charged on Aptos
 - [Move](move/intro.md) - How smart contracts are built, syntax and others
 - [Standard Libraries](standard_libraries/intro.md) - Standard libraries for building smart contracts
-- [Tools](tools/intro.md) - How to use tools to build on Aptos
 - [Learning Resources](resources.md) - More resources to learn more about Aptos and Move
 
 If you learn better from examples, [Aptos By Example](aptos_by_example/intro.md) will be a better bet for you.
