@@ -34,7 +34,7 @@ level = 0
 [output.linkcheck]
 follow-web-links = true # true only when connected to the internet
 traverse-parent-directories = false
-exclude = ['repology.org']
+exclude = ['repology.org', 'github.com']
 user-agent = "mdbook-linkcheck/0.7.7"
 
 warning-policy = "error"
