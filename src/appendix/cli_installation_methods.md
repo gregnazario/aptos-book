@@ -67,6 +67,14 @@ Or you can run the installation command again:
 curl -sSfL https://aptos.dev/scripts/install_cli.sh | sh
 ```
 
+> If you are getting `Illegal instruction` errors when running the CLI, it may be due to your CPU not supporting SIMD
+> instructions. Specifically for older non-SIMD processors or Ubuntu x86_64 docker containers on ARM Macs, you may need to
+> run the following command instead to skip SIMD instructions:
+
+```bash
+curl -fsSL "https://aptos.dev/scripts/install_cli.sh" | sh -s -- --generic-linux
+```
+
 ## Windows
 
 ### Winget
@@ -113,7 +121,8 @@ choco upgrade aptos-cli
 To install the Aptos CLI on Windows using a script, you can use the following command in PowerShell:
 
 ```powershell
-Invoke-WebRequest -Uri "https://aptos.dev/scripts/install_cli.ps1" -OutFile "install_cli.ps1"; .\install_cli.ps1
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser;
+iwr https://aptos.dev/scripts/install_cli.ps1 | iex
 ```
 
 #### Upgrading

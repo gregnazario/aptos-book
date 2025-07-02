@@ -7,19 +7,11 @@ entirely offline, for other locations.
 
 # Get Started
 
-To use this book, you can skip ahead to different sections for specific topics. However, it is mostly structured so that the reader first learns about the building blocks of Aptos and then builds up to writing Move contracts on top.
+To use this book, you can skip ahead to different sections for specific topics. However, it is mostly structured so that
+the reader first learns about the building blocks of Aptos and then builds up to writing Move contracts on top.
 
-It's suggested to learn in this order:
-
-- [Binary Canonical Serialization (BCS)](bcs/intro.md) - How data is serialized in Move on Aptos
-- [Storage](storage/intro.md) - How data is stored on Aptos
-- [Data models](data_models/intro.md) - How data is modeled on Aptos
-- [Gas](gas/intro.md) - How execution and storage are charged on Aptos
-- [Move](move/intro.md) - How smart contracts are built, syntax and others
-- [Standard Libraries](standard_libraries/intro.md) - Standard libraries for building smart contracts
-- [Learning Resources](resources.md) - More resources to learn more about Aptos and Move
-
-If you learn better from examples, [Aptos By Example](aptos_by_example/intro.md) will be a better bet for you.
+It's suggested to learn in the order of chapters of the book. You can also use the search bar to find specific topics
+or keywords.
 
 # Contribution
 
