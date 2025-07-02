@@ -1,6 +1,12 @@
 # Summary
 
-- [Introduction](intro.md)
+[The Aptos Blockchain](aptos.md)
+[Introduction](intro.md)
+
+- [Getting Started](getting_started.md)
+    - [Installation](getting_started/installation.md)
+    - [Hello Blockchain!](getting_started/hello_blockchain.md)
+    - [Hello Aptos CLI!](getting_started/hello_aptos_cli.md)
 - [Binary Canonical Serialization (BCS)](bcs/intro.md)
     - [Primitives](bcs/primitives.md)
     - [Sequences](bcs/sequences.md)
@@ -41,3 +47,6 @@
         - [Linux](tools/aptos-cli/installation/linux.md)
         - [Windows](tools/aptos-cli/installation/windows.md)
 - [Learning Resources](resources.md)
+
+- [Appendix](appendix.md)
+    - [CLI Installation Methods](appendix/cli_installation_methods.md)
