@@ -15,7 +15,7 @@ scoop install https://aptos.dev/scoop/aptos.json
 winget install aptos
 ```
 
-If package manager does not work for you a `PowerShell` script is provided. Please open a Windows PowerShell window and
+If a package manager does not work for you, a `PowerShell` script is provided. Please open a Windows PowerShell window and
 run:
 
 ```powershell

@@ -7,9 +7,7 @@ entirely offline, for other locations.
 
 # Get Started
 
-How to use this book, there are different sections to skip ahead for different topics. However, it is mostly built in an
-opinionated way where the reader first learns about the building blocks of Aptos, and builds up to writing Move
-contracts on top.
+To use this book, you can skip ahead to different sections for specific topics. However, it is mostly structured so that the reader first learns about the building blocks of Aptos and then builds up to writing Move contracts on top.
 
 It's suggested to learn in this order:
 
@@ -29,4 +27,4 @@ Please feel free to open a GitHub issue to add more information into each of the
 
 1. Define the section that it is updating
 2. Provide a concise description of the change
-3. Callout any missing areas
+3. Call out any missing areas
