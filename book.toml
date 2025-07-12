@@ -9,8 +9,12 @@ description = "A brief guide about Aptos."
 [preprocessor.gettext]
 after = ["links"]
 
+[preprocessor.katex]
+after = ["links"]
+
 [preprocessor.mermaid]
 command = "mdbook-mermaid"
+
 
 # Basic llmstxt.org format output
 [output.llms-txt]
