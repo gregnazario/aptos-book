@@ -126,7 +126,7 @@ These types can be primitives (e.g. `u8`, `bool`, `address`) or other structs. I
 ```move
 /// A resource for a single storage slot, holding a message.
 struct MessageHolder has key {
-message: String,
+    message: String,
 }
 ```
 
@@ -144,8 +144,8 @@ blockchain.
 #[event]
 /// Event representing a change in a message, records the old and new messages, and who wrote it.
 struct MessageChange has drop, store {
-account: address,
-from_message: String,
-to_message: String,
+    account: address,
+    from_message: String,
+    to_message: String,
 }
 ```
