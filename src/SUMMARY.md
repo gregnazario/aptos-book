@@ -45,6 +45,7 @@
     - [Vectors](collections/vectors.md)
     - [Maps](collections/maps.md)
     - [Tables](collections/tables.md)
+    - [Collection Types Comparison](collections/comparison.md)
 - [Error Handling](error_handling/intro.md)
     - [Aborting Unrecoverable Errors](error_handling/unrecoverable_errors.md)
     - [Handling Recoverable Errors](error_handling/recoverable_errors.md)
@@ -102,3 +103,4 @@
 - [Learning Resources](resources.md)
 - [Appendix](appendix.md)
     - [CLI Installation Methods](appendix/cli_installation_methods.md)
+    - [Syntax Testing](test_files/move_test.md)
