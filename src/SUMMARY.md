@@ -100,6 +100,7 @@
 - [Aptos By Example](aptos_by_example/intro.md)
     - [Hello Blockchain](aptos_by_example/1_hello_blockchain.md)
     - [Errors](aptos_by_example/2_errors.md)
+    - [Aptos Escrow](aptos_by_example/3_aptos_escrow.md)
 - [Learning Resources](resources.md)
 - [Appendix](appendix.md)
     - [CLI Installation Methods](appendix/cli_installation_methods.md)
