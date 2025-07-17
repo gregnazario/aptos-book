@@ -5,7 +5,8 @@ with the Aptos blockchain, including compiling, testing, and deploying Move modu
 writing data to the blockchain.
 
 > Note: If you are using an unsupported platform or configuration, or you prefer to build a specific version from
-> source, you can follow the [Building from Source](https://aptos.dev/en/build/cli/install-cli/install-cli-specific-version) guide on the Aptos
+> source, you can follow
+> the [Building from Source](https://aptos.dev/en/build/cli/install-cli/install-cli-specific-version) guide on the Aptos
 > developer docs.
 
 The following instructions will tell you how to install the latest version of the Aptos CLI. It is highly recommended

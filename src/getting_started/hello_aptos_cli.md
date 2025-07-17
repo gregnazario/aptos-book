@@ -100,9 +100,9 @@ on the blockchain. The command syntax is as follows:
 aptos account transfer --account <recipient_address> --amount <amount>
 ```
 
-Note that the `--account` flag is used to specify the recipient's address, and the `--amount` flag is used to specify
-the amount to send in Octas. For example, to send 10 Octas to the account
-`0x78077fe8db589e1a3407170cf8af3bd60a8c95737918c15dd6f49dcbecc7900a`, you would run:
+> Note that the `--account` flag is used to specify the recipient's address, and the `--amount` flag is used to specify
+> the amount to send in Octas. For example, to send 10 Octas to the account
+> `0x78077fe8db589e1a3407170cf8af3bd60a8c95737918c15dd6f49dcbecc7900a`, you would run:
 
 ```sh
 aptos account transfer --account 0x78077fe8db589e1a3407170cf8af3bd60a8c95737918c15dd6f49dcbecc7900a --amount 10
