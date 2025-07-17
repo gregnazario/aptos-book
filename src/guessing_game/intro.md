@@ -9,5 +9,5 @@ The rules are simple:
 3. When it's guessed, the game is over and can be reset.
 4. All the guesses will be kept track of, and each number can only be guessed once.
 
-Note that this is pretty trivial from a guessing game, as the number is on-chain and public information, but it can be
-good for learning.
+> Note that this is pretty trivial from a guessing game, as the number is on-chain and public information, but it can be
+> good for learning.

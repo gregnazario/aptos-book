@@ -23,8 +23,10 @@ module module_addr::guessing_game {
 
 Within the `#[test]` annotation, you can add any number of `signer`s to be created for the test. In this example, we'll
 only create one `signer` named `caller`. This `signer` will be used to call the functions in the contract and store
-state at the associated address `0x1337`. Note that you can use either named addresses e.g. `@module_addr` or an address
-literal `@0x1337`.  `@` denotes that the literal is an address.
+state at the associated address `0x1337`.
+
+> Note that you can use either named addresses e.g. `@module_addr` or an address literal `@0x1337`.  `@` denotes that
+> the literal is an address.
 
 ```move
 module module_addr::guessing_game {
@@ -36,9 +38,10 @@ module module_addr::guessing_game {
 }
 ```
 
-Within the test, you can call any move functions that exist, and use assertions similar to in the regular code. Note
-that you can skip the error codes for assertions in tests. Here, we'll test the basic flow of creating a game and
-guessing correctly on the first try. You can see how the game is considered over, and the one guess is recorded.
+Within the test, you can call any move functions that exist, and use assertions similar to in the regular code.
+
+> Note that you can skip the error codes for assertions in tests. Here, we'll test the basic flow of creating a game and
+> guessing correctly on the first try. You can see how the game is considered over, and the one guess is recorded.
 
 ```move
 module module_addr::guessing_game {
@@ -105,8 +108,9 @@ module module_addr::guessing_game {
 ## Testing failures
 
 Failures can similarly be tested, by checking for abort codes. These can be added by adding the
-`#[exepcted_failure(abort_code = ...)]`. Note that the abort code can either be a constant e.g. `E_ALREADY_GUESSED` or
-the number directly `5`.
+`#[exepcted_failure(abort_code = ...)]`.
+
+> Note that the abort code can either be a constant e.g. `E_ALREADY_GUESSED` or the number directly `5`.
 
 ```move
 module module_addr::guessing_game {
