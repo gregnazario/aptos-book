@@ -126,8 +126,8 @@ Examples:
 An address is the 32-byte representation of a storage slot on Aptos. It can be used for accounts, objects, and other
 addressable storage.
 
-Addresses, have special addresses `0x0` -> `0xA`, and then full length addresses. Note, for legacy purposes, addresses
-missing `0`'s in front, are extended by filling the missing bytes with `0`s.
+Addresses have special addresses `0x0` to `0xA`, and then full length addresses. For legacy purposes, addresses
+with leading zeros can be shortened, and they will be automatically extended by padding with leading zeros.
 
 Examples:
 

@@ -24,9 +24,9 @@ Examples:
 | vector<vector\<u8>>          | `[[], [1], [2,3]]`            | 0x03000101020203             |
 | vector<vector\<vector\<u8>>> | `[[[],[1]],[],[[2,3],[4,5]]]` | 0x03020001010002020203020405 |
 
-Longer examples (multi-byte uleb128 length):
+## Longer Examples (Multi-byte ULEB128 Length)
 
-| Type         | Value                                          | Encoded Value                                    |
-|--------------|------------------------------------------------|--------------------------------------------------|
-| vector\<u8>  | `[0,1,2,3,...,126,127]`                        | 0x8001000102...FDFEFF                            |
-| vector\<u32> | `[0,1,2,...,4294967293,4294967294,4294967295]` | 0xFFFFFFFF0F0000000000000001...FFFFFFFEFFFFFFFFF | 
+| Type         | Value                                          | Encoded Value                                    | Description |
+|--------------|------------------------------------------------|--------------------------------------------------|-------------|
+| vector\<u8>  | `[0,1,2,3,...,126,127]`                        | 0x8001000102...FDFEFF                            | Sequence of 128 bytes (0x80 = 128 in uleb128) |
+| vector\<u32> | `[0,1,2,...,4294967293,4294967294,4294967295]` | 0x100000000... (full 4GB range)                  | Sequence of 4,294,967,296 u32 values (0xFFFFFFFF0F is the uleb128 length) |

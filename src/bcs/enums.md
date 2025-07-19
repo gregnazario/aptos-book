@@ -1,7 +1,6 @@
 # Enums
 
-Enums allow for upgradable and different types in a compact representation. They are headed first by a type (in a
-uleb128), followed by the expected type values.
+Enums allow for upgradable and different types in a compact representation. They are encoded with a variant index (as a uleb128 value) followed by the values of the variant's fields.
 
 Example:
 
@@ -32,8 +31,12 @@ ExampleStruct::T1 {
 }
 ```
 
-This would first start with the initial uleb128 representing the type, then followed by the bytes. In this case, it is
-the first in the enum, so it will be represented as enum `0`. All together it is represented by: `0x000103010001FFFF`.
+The encoding starts with a uleb128-encoded variant index (0 for T1), followed by the field values. The complete encoding is `0x000103010001FFFF` where:
+
+- `00`: Variant index 0 (T1)
+- `01`: Value of `number` (1)
+- `030100`: Vector of bools `[true, false, true]` (length 3, values 0x01, 0x00, 0x01)
+- `FFFF`: Value of `uint16` (65535) in little-endian
 
 For the second type, it's simply just represented as the uleb128 representing the type for value `1`:
 
@@ -44,5 +47,5 @@ ExampleStruct::T2 {} = 0x01
 For the third type, it's represented as the uleb128 representing the type for value `2` followed by the tuple:
 
 ```
-ExampleStruct::T2(3,true) = 0x020301
+ExampleStruct::T3(3,true) = 0x020301
 ```

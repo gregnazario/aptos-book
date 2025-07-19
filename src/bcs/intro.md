@@ -8,7 +8,7 @@ Binary Canonical Serialization (BCS) is a method that allows for compact and eff
 
 The serialization method is directly in bytes and is not human-readable. For example, for a String `hello`, it would be
 represented by the length of the string as a binary encoded uleb-128, followed by the UTF-8 encoded bytes of hello.  
-e.g. `"hello" = 0x0548656C6C6F`  This is different than, say, a human-readable format such as JSON which would give
+e.g. `"hello" = 0x0548656C6C6F`. This is different than, say, a human-readable format such as JSON which would give
 `"hello"`
 
 ### Canonical

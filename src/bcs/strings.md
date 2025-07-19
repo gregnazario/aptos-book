@@ -11,7 +11,7 @@ Examples:
 | Value   | Encoded Value      |
 |---------|--------------------|
 | A       | 0x0141             |
-| hello   | 0x0568656C6C6f     |
+| hello   | 0x0568656C6C6F     |
 | goodbye | 0x07676F6F64627965 |
-| ❤️      | 0x06e29da4efb88f   |
+| ❤️      | 0x06E29DA4EFB88F   |
 | 💻      | 0x03E29C8D         |
