@@ -1,0 +1,24 @@
+<svg width="500" height="180" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .label { font: 14px sans-serif; }
+  </style>
+  <text x="10" y="15" class="label">Speculative Execution</text>
+  <text x="180" y="15" class="label">Validation</text>
+  <text x="340" y="15" class="label">Commit</text>
+
+  <rect id="tx1" x="10" y="30" width="100" height="30" fill="#4CAF50">
+    <animate attributeName="x" values="10;180;340" keyTimes="0;0.5;1" dur="6s" fill="freeze" />
+  </rect>
+  <text x="15" y="50" class="label">Tx1</text>
+
+  <rect id="tx2" x="10" y="80" width="100" height="30" fill="#2196F3">
+    <animate attributeName="x" values="10;180;10;180;340" keyTimes="0;0.33;0.40;0.73;1" dur="6s" fill="freeze" />
+    <animate attributeName="fill" values="#2196F3;#2196F3;#f44336;#f44336;#2196F3" keyTimes="0;0.33;0.40;0.73;1" dur="6s" fill="freeze" />
+  </rect>
+  <text x="15" y="100" class="label">Tx2</text>
+
+  <rect id="tx3" x="10" y="130" width="100" height="30" fill="#FFC107">
+    <animate attributeName="x" values="10;180;340" keyTimes="0;0.5;1" dur="6s" fill="freeze" />
+  </rect>
+  <text x="15" y="150" class="label">Tx3</text>
+</svg>
