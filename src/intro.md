@@ -1,22 +1,20 @@
 # Introduction
 
-The Aptos book is an extension to the source documentation in the Move book. The purpose of the Aptos book is to
-provide a single resource for design patterns, usage, and other resources for building on Aptos. This should only be
-providing context for how to build on Aptos, and anything needed for that. The additional benefit is that it can be run
-entirely offline, for other locations.
+The Aptos book extends the Move book, offering a single resource for design patterns, usage examples, and other
+information needed to build on Aptos. It provides context for building on Aptos and can be used entirely offline.
 
-# Get Started
+## Get Started
 
-To use this book, you can skip ahead to different sections for specific topics. However, it is mostly structured so that
-the reader first learns about the building blocks of Aptos and then builds up to writing Move contracts on top.
+You can jump to any section for a specific topic, but the material is arranged so that readers first learn Aptos
+fundamentals and then progress to writing Move contracts.
 
-It's suggested to learn in the order of chapters of the book. You can also use the search bar to find specific topics
-or keywords.
+We recommend working through the chapters in order. Alternatively, use the search bar to find specific topics or
+keywords.
 
-# Contribution
+## Contribution
 
-Please feel free to open a GitHub issue to add more information into each of these sections. All pull requests must:
+Contributions are welcome. Please open a GitHub issue or pull request and:
 
-1. Define the section that it is updating
+1. Identify the section being updated
 2. Provide a concise description of the change
-3. Call out any missing areas
+3. Note any gaps or missing areas
