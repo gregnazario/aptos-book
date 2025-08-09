@@ -14,7 +14,7 @@ module module_addr::test_module {
     use aptos_framework::primary_fungible_store;
     use aptos_framework::timestamp;
 
-    /// The lookup to object for escrow in an easily addressible spot
+    /// The lookup to object for escrow in an easily addressable spot
     ///
     /// The main purpose here is to provide fully removable types to allow for full recovery of storage refunds, and not
     /// have a duplicate object.

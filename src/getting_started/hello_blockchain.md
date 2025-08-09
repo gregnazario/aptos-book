@@ -33,7 +33,7 @@ hello_blockchain
 Then, the run next command to simply build and publish the contract:
 
 ```sh
-aptos move publish --profile tutorial --named-addresses hello_blockhain=tutorial
+aptos move publish --profile tutorial --named-addresses hello_blockchain=tutorial
 ```
 
 > Note that `named-addresses` sets the named address `hello_blockchain` in the `Move.toml` file to
