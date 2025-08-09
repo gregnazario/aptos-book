@@ -67,6 +67,7 @@
 - [Concurrency](concurrency/intro.md)
     - [Concurrency Basics](concurrency/basics.md)
     - [Concurrency and Move Types](concurrency/types.md)
+    - [Block-STM](concurrency/blockstm.md)
 - [Design Patterns](design_patterns/intro.md)
     - [Account Authorization by Signer](design_patterns/account_authorization_by_signer.md)
     - [Event Emission](design_patterns/event_emission.md)
