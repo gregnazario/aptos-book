@@ -23,7 +23,7 @@ Gas unit price is the amount you're willing to pay per gas unit on a transaction
 lower values. When choosing a gas unit price, keep in mind that your account needs enough APT to pay for the entire max
 gas amount times the gas unit price.
 
-Range: 100 - ??? (TOOD: put number or how to get it from gas config)
+Range: 100 - ??? (TODO: put number or how to get it from gas config)
 
 ## Gas Config
 

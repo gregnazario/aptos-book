@@ -108,7 +108,7 @@ module module_addr::guessing_game {
 ## Testing failures
 
 Failures can similarly be tested, by checking for abort codes. These can be added by adding the
-`#[exepcted_failure(abort_code = ...)]`.
+`#[expected_failure(abort_code = ...)]`.
 
 > Note that the abort code can either be a constant e.g. `E_ALREADY_GUESSED` or the number directly `5`.
 

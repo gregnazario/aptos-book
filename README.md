@@ -1,5 +1,6 @@
+
 # Aptos Book
-The Aptos Book – a one-stop reference for Aptos.
+The Aptos Book - A one-stop reference for Aptos.
 
 ## Setup
 
