@@ -60,6 +60,7 @@
 - [Parallelization](parallelization/intro.md)
     - [Parallelization Basics](parallelization/basics.md)
     - [Parallelization Considerations](parallelization/considerations.md)
+    - [Block-STM](parallelization/blockstm.md)
 - [Design Patterns](design_patterns/intro.md)
     - [Account Authorization by Signer](design_patterns/account_authorization_by_signer.md)
     - [Event Emission](design_patterns/event_emission.md)
