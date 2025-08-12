@@ -5,9 +5,11 @@ Pattern matching lets you branch on the variant of an enum and bind any inner va
 ```move
 fun describe(status: Status): vector<u8> {
     match status {
-        Status::Success(v) => b"ok".to_vec(),
+        Status::Success(_) => b"ok".to_vec(),
         Status::Error { code, message } => message,
-        Status::Pending => b"pending".to_vec(),
+        Status::Success(v) => b"ok",
+        Status::Error { code, message } => message,
+        Status::Pending => b"pending",
     }
 }
 ```
