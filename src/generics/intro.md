@@ -81,7 +81,7 @@ Since all types that the constraints apply to, this can be tricky to use when pr
 
 For example if I have a function that takes in a generic and converts it to a single type, we will need to manage all possible types, including primitives to be passed in.
 
-```
+```move
 struct Storage {
   bytes: vector<u8>
 }
