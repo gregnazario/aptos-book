@@ -21,7 +21,7 @@ module examples::wallet {
         wallet.balance.amount = wallet.balance.amount + amount;
     }
 
-    /// Withdraw coins using deconstruction and reconstruction
+    /// Withdraw coins using deconstruction and reconstruction note that this is unnecessary, but used for an example
     public fun withdraw(account: &signer, amount: u64) acquires Wallet {
         let wallet = &mut Wallet[signer::address_of(account)];
         let Balance { amount: bal } = wallet.balance; // deconstruct
