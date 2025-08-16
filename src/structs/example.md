@@ -8,7 +8,7 @@ module examples::wallet {
     }
 
     #[resource_group_member(group = Wallet)]
-    struct Balance has key { amount: u64 }
+    struct Balance has store { amount: u64 }
 
     /// Create an empty wallet resource under the signer
     public fun create(account: &signer) {
