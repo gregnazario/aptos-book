@@ -13,7 +13,7 @@ fun do_something() {
 
 In this case, the error message when calling `do_something()` wil be `Uh oh`.
 
-More approrpiately, errors are usually thrown by asserts.  An example here below shows if you want to ensure a value is less than 10.
+More appropriately, errors are usually thrown by asserts.  An example here below shows if you want to ensure a value is less than 10.
 
 ```move
 

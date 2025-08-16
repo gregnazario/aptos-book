@@ -1,6 +1,6 @@
 # CLI Installation Methods
 
-This appendix provides detailed instructions for installing and upgrading the Aptos CLI on various operating systems. For a quick start, see the [Installation](getting_started/installation.md) page.
+This appendix provides detailed instructions for installing and upgrading the Aptos CLI on various operating systems. For a quick start, see the [Installation](../getting_started/installation.md) page.
 
 [![Packaging status](https://repology.org/badge/vertical-allrepos/aptos.svg)](https://repology.org/project/aptos/versions)
 
