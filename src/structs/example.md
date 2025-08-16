@@ -23,7 +23,7 @@ module examples::wallet {
 
     /// Withdraw coins using deconstruction and reconstruction
     public fun withdraw(account: &signer, amount: u64) acquires Wallet {
-        let wallet = borrow_global_mut<Wallet>(signer::address_of(account));
+        let wallet = &mut Wallet[signer::address_of(account)];
         let Balance { amount: bal } = wallet.balance; // deconstruct
         assert!(bal >= amount, 1);
         wallet.balance = Balance { amount: bal - amount }; // reconstruct
