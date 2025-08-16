@@ -17,7 +17,7 @@ module examples::wallet {
 
     /// Add coins to the wallet
     public fun deposit(account: &signer, amount: u64) acquires Wallet {
-        let wallet = borrow_global_mut<Wallet>(signer::address_of(account));
+        let wallet = &mut Wallet[signer::address_of(account)];
         wallet.balance.amount = wallet.balance.amount + amount;
     }
 
