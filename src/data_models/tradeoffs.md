@@ -47,4 +47,4 @@ ownership models, as well as some tricks for providing composability, and soul-b
 - Keeping track of objects can be complex.
 - More complex access, does require handling ownership or other access actions.
 - Soul-bound objects cannot be removed entirely, indexers need to ignore the resources to make them disappear.
-- More complex indexing needed to keep track of object owners and properties (especiallly with ownership chains).
+- More complex indexing needed to keep track of object owners and properties (especially with ownership chains).

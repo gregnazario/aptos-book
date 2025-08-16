@@ -1,5 +1,5 @@
-
 # Aptos Book
+
 The Aptos Book - A one-stop reference for Aptos.
 
 ## Setup

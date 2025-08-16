@@ -1,23 +1,22 @@
 # CLI Installation Methods
 
+This appendix provides detailed instructions for installing and upgrading the Aptos CLI on various operating systems. For a quick start, see the [Installation](getting_started/installation.md) page.
+
 [![Packaging status](https://repology.org/badge/vertical-allrepos/aptos.svg)](https://repology.org/project/aptos/versions)
+
+---
 
 ## macOS
 
-### Homebrew
+### Homebrew (Recommended)
 
-#### Installation
-
-To install the Aptos CLI on macOS, you can use Homebrew, a popular package manager. Open your terminal and run the
-following command:
+**To install:**
 
 ```bash
 brew install aptos
 ```
 
-#### Upgrading
-
-To upgrade the Aptos CLI using Homebrew, run:
+**To upgrade:**
 
 ```bash
 brew upgrade aptos
@@ -25,71 +24,60 @@ brew upgrade aptos
 
 ### Script Installation
 
-#### Installation
-
-To install the Aptos CLI using a script, you can use the following command in your terminal:
+Run the following command for both initial installation and upgrading:
 
 ```bash
 curl -sSfL https://aptos.dev/scripts/install_cli.sh | sh
 ```
 
-#### Upgrading
-
-To upgrade the Aptos CLI using the script, you can run the same command again:
-
-```bash
-curl -sSfL https://aptos.dev/scripts/install_cli.sh | sh
-```
+---
 
 ## Linux
 
 ### Script Installation
 
-#### Installation
-
-To install the Aptos CLI on Linux, you can use the following command in your terminal:
+**To install:**
 
 ```bash
 curl -sSfL https://aptos.dev/scripts/install_cli.sh | sh
 ```
 
-#### Upgrading
+> **Note on CPU Compatibility**
+> If you encounter an `Illegal instruction` error, your CPU may not support certain SIMD instructions. This can happen on older processors or when running in specific virtualized environments (e.g., Ubuntu x86_64 on an ARM Mac).
+>
+> Use the following command instead for a generic build:
+>
+> ```bash
+> curl -fsSL "https://aptos.dev/scripts/install_cli.sh" | sh -s -- --generic-linux
+> ```
 
-To upgrade the Aptos CLI using the script, you can use the CLI:
+**To upgrade:**
+
+You can either use the built-in update command:
 
 ```bash
 aptos update aptos
 ```
 
-Or you can run the installation command again:
+Or, re-run the installation script:
 
 ```bash
 curl -sSfL https://aptos.dev/scripts/install_cli.sh | sh
 ```
 
-> If you are getting `Illegal instruction` errors when running the CLI, it may be due to your CPU not supporting SIMD
-> instructions. Specifically for older non-SIMD processors or Ubuntu x86_64 docker containers on ARM Macs, you may need to
-> run the following command instead to skip SIMD instructions:
-
-```bash
-curl -fsSL "https://aptos.dev/scripts/install_cli.sh" | sh -s -- --generic-linux
-```
+---
 
 ## Windows
 
-### Winget
+### Winget (Recommended)
 
-#### Installation
-
-To install the Aptos CLI on Windows using Winget, open a command prompt or PowerShell and run the following command:
+**To install:**
 
 ```powershell
 winget install aptos.aptos-cli
 ```
 
-#### Upgrading
-
-To upgrade the Aptos CLI using Winget, run:
+**To upgrade:**
 
 ```powershell
 winget upgrade aptos.aptos-cli
@@ -97,18 +85,13 @@ winget upgrade aptos.aptos-cli
 
 ### Chocolatey
 
-#### Installation
-
-To install the Aptos CLI on Windows using Chocolatey, open a command prompt or PowerShell with administrative privileges
-and run:
+**To install** (in an administrative shell):
 
 ```powershell
 choco install aptos-cli
 ```
 
-#### Upgrading
-
-To upgrade the Aptos CLI using Chocolatey, run:
+**To upgrade** (in an administrative shell):
 
 ```powershell
 choco upgrade aptos-cli
@@ -116,26 +99,24 @@ choco upgrade aptos-cli
 
 ### Script Installation
 
-#### Installation
+**To install:**
 
-To install the Aptos CLI on Windows using a script, you can use the following command in PowerShell:
+Run the following command in PowerShell. This will set the execution policy for the current user and then run the installer.
 
 ```powershell
-Set-ExecutionPolicy RemoteSigned -Scope CurrentUser;
-iwr https://aptos.dev/scripts/install_cli.ps1 | iex
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser; iwr https://aptos.dev/scripts/install_cli.ps1 | iex
 ```
 
-#### Upgrading
+**To upgrade:**
 
-To upgrade the Aptos CLI using the script, you can use the CLI:
+You can either use the built-in update command:
 
 ```powershell
 aptos update aptos
 ```
 
-Or you can run the installation command again:
+Or, re-run the installation script:
 
 ```powershell
-Invoke-WebRequest -Uri "https://aptos.dev/scripts/install_cli.ps1" -OutFile "install_cli.ps1"; .\install_cli.ps1
+iwr https://aptos.dev/scripts/install_cli.ps1 | iex
 ```
-
