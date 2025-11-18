@@ -18,7 +18,7 @@ Next, open a new test folder, then call the command `aptos move init --template`
 ```sh
 mkdir hello_blockchain
 cd hello_blockchain
-aptos move init --template hello_blockchain
+aptos move init --template hello-blockchain
 ```
 
 This will create a folder structure like so:
@@ -48,7 +48,8 @@ Now that you've deployed your first contract, let's interact with it.
 Let's create your first message on-chain by calling an [entry function](../appendix/glossary.md#entry_function):
 
 ```sh
-aptos move run --profile tutorial --function-id tutorial::hello_blockchain::set_message --args "string:Hello world!"
+aptos move run --profile tutorial --function-id tutorial::message::set_message --args 'string:Hello world!'
+
 ```
 
 > Note that this runs the entry function `hello_blockchain::set_message` on the contract you just deployed.
@@ -57,7 +58,7 @@ aptos move run --profile tutorial --function-id tutorial::hello_blockchain::set_
 Once this is run successfully, you can view the on-chain state, with a [view function](../appendix/glossary.md#view_function):
 
 ```sh
-aptos move view --profile tutorial --function-id tutorial::hello_blockchain::get_message --args address:tutorial
+aptos move view --profile tutorial --function-id tutorial::message::get_message --args address:tutorial
 ```
 
 This will return the value `Hello world!` you just wrote on-chain.  Congrats you've just written and read your first data on-chain!

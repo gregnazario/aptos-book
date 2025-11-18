@@ -25,7 +25,7 @@ command = "mdbook-mermaid"
 [output.html]
 additional-js = ["mermaid.min.js", "mermaid-init.js", "move-init.js"]
 git-repository-url = "https://github.com/gregnazario/aptos-book"
-edit-url-template = "https://github.com/<owner>/<repo>/edit/<branch>/{path}"
+edit-url-template = "https://github.com/gregnazario/aptos-book/edit/main/{path}"
 site-url = "https://aptos-book.com"
 cname = "aptos-book.com"
 
