@@ -65,7 +65,53 @@ module module_addr::guessing_game {
 But, of course the tests now fail!  We will need to update the existing tests given our expectations. This can be done
 by either adding a `#[test_only]` function, or by setting the seed for the randomness in tests.
 
-TODO: Code example updating the tests
+We can add a `#[test_only]` helper function that lets us create a game with a known number for testing:
+
+```move
+module module_addr::guessing_game {
+    // ... existing code ...
+
+    #[test_only]
+    fun create_game_for_test(caller: &signer, number: u8) {
+        let caller_addr = signer::address_of(caller);
+        assert!(!exists<Game>(caller_addr), E_GAME_INITIALIZED);
+        move_to(caller, Game {
+            number,
+            guesses: vector[],
+            game_over: false,
+        })
+    }
+
+    #[test_only]
+    fun reset_game_for_test(caller: &signer, new_num: u8) acquires Game {
+        let caller_addr = signer::address_of(caller);
+        assert!(exists<Game>(caller_addr), E_NO_GAME);
+        let game = &mut Game[caller_addr];
+        assert!(game.game_over, E_GAME_NOT_OVER);
+        game.game_over = false;
+        game.guesses = vector[];
+        game.number = new_num;
+    }
+
+    #[test(caller = @0x1337)]
+    fun test_flow(caller: &signer) acquires Game {
+        let caller_addr = signer::address_of(caller);
+        create_game_for_test(caller, 1);
+        assert!(!is_game_over(caller_addr));
+
+        guess(caller, 1);
+        assert!(is_game_over(caller_addr));
+
+        reset_game_for_test(caller, 2);
+        assert!(!is_game_over(caller_addr));
+
+        guess(caller, 2);
+        assert!(is_game_over(caller_addr));
+    }
+}
+```
+
+The `#[test_only]` attribute ensures these helper functions are excluded from the production bytecode. They give us a deterministic way to test the game logic without relying on randomness.
 
 Once this is done, we can simply upgrade the contract by deploying again.
 

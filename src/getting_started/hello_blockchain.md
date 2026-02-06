@@ -39,7 +39,7 @@ aptos move publish --profile tutorial --named-addresses hello_blockchain=tutoria
 > Note that `named-addresses` sets the named address `hello_blockchain` in the `Move.toml` file to
 > the `tutorial` profile created in the CLI.
 
-Great!  You've deployed your first contract!  TODO: add link to visit it in the explorer.
+Great!  You've deployed your first contract!  You can view it on the [Aptos Explorer](https://explorer.aptoslabs.com) by searching for your account address and selecting the appropriate network.
 
 ## Running the app
 

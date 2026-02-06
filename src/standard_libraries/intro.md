@@ -23,6 +23,9 @@ These standards are built into the 0x1 and 0x4 addresses:
 
 # Additional Libraries
 
-These are from third parties, and can be used as well.
+The Aptos ecosystem also has third-party libraries and tools:
 
-TODO
+- [Aptos Token Objects](https://github.com/aptos-labs/aptos-framework/tree/main/aptos-move/framework/aptos-token-objects) -- The modern NFT and semi-fungible token framework
+- [Pyth Network](https://pyth.network/) -- Price oracle data feeds
+- [Switchboard](https://switchboard.xyz/) -- Decentralized oracle network
+- [Econia](https://github.com/econia-labs/econia) -- On-chain order book DEX protocol
