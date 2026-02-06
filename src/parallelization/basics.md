@@ -4,7 +4,7 @@ BlockSTM is the parallel execution engine that drives Aptos.  It uses what we ca
 
 ## How BlockSTM Works
 
-1. **Optimistic Execution**: All transactions in a block are executed in parallel, assuming no conflicts.
+1. **Optimistic Execution**: All transactions in a block are executed in parallel, assuming no conflicts. When all transactions complete without conflicts, the entire block can be committed without any re-execution -- this is the ideal case that BlockSTM is optimized for.
 2. **Validation**: After execution, the read/write sets of each transaction are compared.
 3. **Conflict Detection**: If transaction B reads a storage slot that transaction A wrote to, and A comes before B in the block ordering, this is a conflict.
 4. **Re-execution**: Conflicting transactions are re-executed with the updated state.

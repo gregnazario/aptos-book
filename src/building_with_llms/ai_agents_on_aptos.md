@@ -111,12 +111,17 @@ For safety, define on-chain guardrails that limit what an agent can do:
 ```move
 module my_addr::agent_vault {
     use std::signer;
+    use aptos_framework::timestamp;
 
-    /// Maximum amount the agent can transfer in a single transaction
-    const MAX_TRANSFER: u64 = 1000000; // 0.01 APT
+    /// Agent is not active
+    const E_AGENT_INACTIVE: u64 = 1;
+    /// Transfer exceeds per-transaction limit
+    const E_TRANSFER_TOO_LARGE: u64 = 2;
+    /// Transfer would exceed daily spending limit
+    const E_DAILY_LIMIT_EXCEEDED: u64 = 3;
 
-    /// Maximum daily spend
-    const MAX_DAILY_SPEND: u64 = 100000000; // 1 APT
+    /// Seconds in a day, used for daily spend reset
+    const SECONDS_PER_DAY: u64 = 86400;
 
     struct AgentConfig has key {
         owner: address,
@@ -134,7 +139,23 @@ module my_addr::agent_vault {
         max_daily_spend: u64,
     ) {
         let owner_addr = signer::address_of(owner);
-        // Store configuration...
+        move_to(owner, AgentConfig {
+            owner: owner_addr,
+            daily_spent: 0,
+            last_reset_timestamp: timestamp::now_seconds(),
+            max_transfer,
+            max_daily_spend,
+            is_active: true,
+        });
+    }
+
+    /// Reset daily spending if a new day has started
+    fun maybe_reset_daily_spent(config: &mut AgentConfig) {
+        let now = timestamp::now_seconds();
+        if (now - config.last_reset_timestamp >= SECONDS_PER_DAY) {
+            config.daily_spent = 0;
+            config.last_reset_timestamp = now;
+        };
     }
 
     /// The agent calls this -- guardrails enforce limits
@@ -146,9 +167,12 @@ module my_addr::agent_vault {
         let agent_addr = signer::address_of(agent);
         let config = &mut AgentConfig[agent_addr];
 
-        assert!(config.is_active, 1); // Agent must be active
-        assert!(amount <= config.max_transfer, 2); // Per-transaction limit
-        assert!(config.daily_spent + amount <= config.max_daily_spend, 3); // Daily limit
+        assert!(config.is_active, E_AGENT_INACTIVE);
+        assert!(amount <= config.max_transfer, E_TRANSFER_TOO_LARGE);
+
+        // Reset daily spending if a new day has started
+        maybe_reset_daily_spent(config);
+        assert!(config.daily_spent + amount <= config.max_daily_spend, E_DAILY_LIMIT_EXCEEDED);
 
         config.daily_spent = config.daily_spent + amount;
         // Execute transfer...

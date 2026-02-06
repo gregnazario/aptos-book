@@ -14,7 +14,7 @@ module my_addr::functional {
         let i = 0;
         let len = v.length();
         while (i < len) {
-            result.push_back(f(*v.borrow(i)));
+            result.push_back(f(v[i]));
             i = i + 1;
         };
         result
