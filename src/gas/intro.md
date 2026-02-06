@@ -9,11 +9,8 @@ and ensure the network runs smoothly and with high performance. Gas cost for a t
 - The storage refund - which is based on the number of storage slots deleted.
 
 The total gas cost (fee or refund) is calculated as:
-TODO: Add LaTeX to make this nicer
 
-```
-(gas used x gas unit price) + storage refund = total gas
-```
+$$\text{total fee} = (\text{gas used} \times \text{gas unit price}) + \text{storage refund}$$
 
 Keep in mind, the storage refund can be greater than the other side, so you can actually gain gas in a transaction by
 freeing storage slots.
