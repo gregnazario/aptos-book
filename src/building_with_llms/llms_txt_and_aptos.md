@@ -45,6 +45,8 @@ You can fetch the llms.txt file programmatically to build AI-powered tools:
 
 ```typescript
 // Fetch the Aptos Book content for LLM context
+// This book is hosted at aptos-book.com; the llms-full.txt endpoint
+// serves the entire book in a single LLM-friendly text file.
 const response = await fetch("https://aptos-book.com/llms-full.txt");
 const aptosBookContent = await response.text();
 

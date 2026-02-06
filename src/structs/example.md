@@ -13,7 +13,7 @@ module my_addr::address_book {
 
     /// No address book found for this account
     const E_NO_ADDRESS_BOOK: u64 = 1;
-    /// Contact not found
+    /// Contact not found in the address book
     const E_CONTACT_NOT_FOUND: u64 = 2;
     /// Address book already exists
     const E_ALREADY_EXISTS: u64 = 3;
@@ -51,6 +51,19 @@ module my_addr::address_book {
 
         let book = &mut AddressBook[addr];
         book.contacts.push_back(Contact { name, phone });
+    }
+
+    /// Remove a contact by index
+    public entry fun remove_contact(
+        account: &signer,
+        index: u64,
+    ) acquires AddressBook {
+        let addr = signer::address_of(account);
+        assert!(exists<AddressBook>(addr), E_NO_ADDRESS_BOOK);
+
+        let book = &mut AddressBook[addr];
+        assert!(index < book.contacts.length(), E_CONTACT_NOT_FOUND);
+        book.contacts.remove(index);
     }
 
     /// View all contacts
@@ -107,10 +120,29 @@ module my_addr::address_book {
     }
 
     #[test(account = @0x1)]
+    fun test_remove_contact(account: &signer) acquires AddressBook {
+        let addr = signer::address_of(account);
+        create_address_book(account);
+        add_contact(account, std::string::utf8(b"Alice"), std::string::utf8(b"555-1234"));
+        add_contact(account, std::string::utf8(b"Bob"), std::string::utf8(b"555-5678"));
+        assert!(contact_count(addr) == 2);
+
+        remove_contact(account, 0);
+        assert!(contact_count(addr) == 1);
+    }
+
+    #[test(account = @0x1)]
     #[expected_failure(abort_code = E_ALREADY_EXISTS)]
     fun test_double_create_fails(account: &signer) {
         create_address_book(account);
         create_address_book(account);
+    }
+
+    #[test(account = @0x1)]
+    #[expected_failure(abort_code = E_CONTACT_NOT_FOUND)]
+    fun test_remove_invalid_index_fails(account: &signer) acquires AddressBook {
+        create_address_book(account);
+        remove_contact(account, 0); // No contacts -- should fail
     }
 }
 ```
@@ -126,6 +158,7 @@ module my_addr::address_book {
 
 - `create_address_book` stores a new empty address book under the caller's account.
 - `add_contact` appends a contact to the caller's existing address book.
+- `remove_contact` removes a contact by index, using `E_CONTACT_NOT_FOUND` if the index is out of bounds.
 - `delete_address_book` removes and destructures the resource, freeing the storage slot.
 
 ### View Functions

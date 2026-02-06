@@ -10,7 +10,7 @@ and ensure the network runs smoothly and with high performance. Gas cost for a t
 
 The total gas cost (fee or refund) is calculated as:
 
-$$\text{total fee} = (\text{gas used} \times \text{gas unit price}) + \text{storage refund}$$
+$$\text{total gas cost} = (\text{gas used} \times \text{gas unit price}) + \text{storage refund}$$
 
 Keep in mind, the storage refund can be greater than the other side, so you can actually gain gas in a transaction by
 freeing storage slots.
