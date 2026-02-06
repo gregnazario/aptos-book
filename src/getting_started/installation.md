@@ -123,9 +123,9 @@ This book makes no assumptions about what tools you use to author Move code.
 Just about any text editor will get the job done! However, many text editors and
 integrated development environments (IDEs) have built-in support for Move:
 
-- **VS Code**: Install the [Aptos Move Analyzer](https://marketplace.visualstudio.com/items?itemName=MoveBit.aptos-move-analyzer) extension for syntax highlighting, go-to-definition, auto-completion, and error checking.
-- **IntelliJ IDEA**: The [Move Language Plugin](https://plugins.jetbrains.com/plugin/14721-move-language) provides IDE support for JetBrains IDEs.
-- **Vim/Neovim**: Use the [move.vim](https://github.com/rvber/move.vim) plugin for syntax highlighting.
+- **VS Code**: Search for "Aptos Move Analyzer" in the VS Code Extensions Marketplace for syntax highlighting, go-to-definition, auto-completion, and error checking.
+- **IntelliJ IDEA**: Search for "Move Language" in the JetBrains Plugin Marketplace for IDE support.
+- **Vim/Neovim**: Community-maintained Move syntax highlighting plugins are available.
 - **Emacs**: Community-maintained `move-mode` packages are available.
 
 For the best development experience, VS Code with the Aptos Move Analyzer extension is recommended.
