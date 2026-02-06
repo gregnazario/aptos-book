@@ -4,7 +4,7 @@ language = "en"
 multilingual = true
 src = "src"
 title = "The Aptos Book"
-description = "A brief guide about Aptos."
+description = "A comprehensive guide to building on the Aptos blockchain with the Move programming language. Covers core language concepts, smart contract development, design patterns, standard libraries, and AI-assisted development with LLMs."
 
 [preprocessor.gettext]
 after = ["links"]
