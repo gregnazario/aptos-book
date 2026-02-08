@@ -18,7 +18,7 @@ mise install
 
 # Install mdBook and plugins with specific versions
 echo "Installing mdBook and plugins..."
-cargo install mdbook --version 0.4.49
+cargo install mdbook --version 0.4.52
 cargo install mdbook-mermaid --version 0.15.0
 cargo install mdbook-katex --version 0.9.4
 cargo install mdbook-linkcheck --version 0.7.7
