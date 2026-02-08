@@ -10,6 +10,7 @@ description = "A comprehensive guide to building on the Aptos blockchain with th
 after = ["links"]
 
 [preprocessor.katex]
+command = "scripts/mdbook-katex-wrapper.sh"
 after = ["links"]
 
 [preprocessor.mermaid]
@@ -23,7 +24,7 @@ command = "mdbook-mermaid"
 [output.llms-txt-full]
 
 [output.html]
-additional-js = ["mermaid.min.js", "mermaid-init.js", "move-init.js"]
+additional-js = ["mermaid.min.js", "mermaid-init.js", "highlightjs-move.js", "move-init.js"]
 git-repository-url = "https://github.com/gregnazario/aptos-book"
 edit-url-template = "https://github.com/gregnazario/aptos-book/edit/main/{path}"
 site-url = "https://aptos-book.com"

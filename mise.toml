@@ -3,7 +3,7 @@
 rust = "1.84.0"
 
 # mdBook and its plugins with specific versions from setup.sh
-mdbook = "0.4.51"
+mdbook = "0.4.52"
 mdbook-mermaid = "0.15.0"
 mdbook-katex = "0.9.4"
 mdbook-linkcheck = "0.7.7"
@@ -15,7 +15,7 @@ RUST_BACKTRACE = "1"
 
 [tasks]
 # Define common scripts for the project
-setup = "mise install && cargo install mdbook@0.4.49 mdbook-mermaid@0.15.0 mdbook-katex@0.9.4 mdbook-linkcheck@0.7.7 mdbook-llms-txt-tools@0.1.1"
+setup = "mise install && cargo install mdbook@0.4.52 mdbook-mermaid@0.15.0 mdbook-katex@0.9.4 mdbook-linkcheck@0.7.7 mdbook-llms-txt-tools@0.1.1"
 build = "mdbook build"
 serve = "mdbook serve"
 watch = "mdbook watch"
